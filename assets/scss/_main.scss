@@ -1,0 +1,23 @@
+.hero {
+  video {
+    width: 100%;
+  }
+}
+
+// main
+.promo {
+  display: flex;
+  .sec-left img {
+    width: 50%;
+    display: none;
+    &:first-child {
+      display: block;
+    }
+  }
+  .sec-right {
+    width: 50%;
+  }
+  .promoSlider .swiper-slide {
+    border: 1px solid #000;
+  }
+}
