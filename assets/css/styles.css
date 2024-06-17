@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 /* reset */
 body,
 div,
@@ -120,9 +122,9 @@ input[type=search]::-webkit-search-cancel-button {
 /* 기본 폰트 설정 */
 /* mobile */
 body {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.5;
-  font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "SUIT", sans-serif;
   color: #1d1d1d;
   font-weight: 400;
 }
@@ -269,23 +271,128 @@ legend {
   content: "";
 }
 
+.inner {
+  width: 1720px;
+  margin: auto;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+h2 {
+  font-family: "Libre Bodoni", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 32px;
+}
+
 .hero video {
   width: 100%;
 }
 
-.promo {
+.sec-promo {
   display: flex;
 }
-.promo .sec-left img {
+.sec-promo .sec-promo-left {
   width: 50%;
-  display: none;
+  overflow: hidden;
 }
-.promo .sec-left img:first-child {
-  display: block;
-}
-.promo .sec-right {
+.sec-promo .sec-promo-right {
   width: 50%;
+  padding-left: 60px;
 }
-.promo .promoSlider .swiper-slide {
-  border: 1px solid #000;
+
+.sec-rooms h2 {
+  text-align: center;
+}
+.sec-rooms .big-img {
+  position: relative;
+  width: 1429px;
+  height: 766px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sec-rooms .big-img .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 61.25%);
+  opacity: 0.5;
+}
+.sec-rooms .txt-wrap {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  color: #fff;
+}
+.sec-rooms .txt-wrap h3 {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.sec-rooms .txt-wrap p {
+  width: 300px;
+  margin-bottom: 32px;
+}
+.sec-rooms .pagination {
+  height: 766px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sec-rooms .pagination li {
+  position: relative;
+  width: 267px;
+  height: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.sec-rooms .pagination li.active {
+  height: 180px;
+}
+.sec-rooms .pagination li.active .dimmed {
+  opacity: 0;
+}
+.sec-rooms .pagination li.active img {
+  height: 100%;
+}
+.sec-rooms .pagination .dimmed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.sec-rooms .pagination img {
+  width: 100%;
+}
+
+.sec-info {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/sec_info_bg1.png);
+}
+.sec-info .item1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-info .item1 .txt-wrap {
+  text-align: center;
+  width: 720px;
+  color: #fff;
+}
+.sec-info .item1 .txt-wrap h2 {
+  margin-bottom: 4px;
+}
+.sec-info .item1 .txt-wrap strong {
+  font-size: 1.5rem;
+}
+.sec-info .item1 .txt-wrap p {
+  font-size: 1.125rem;
 }/*# sourceMappingURL=styles.css.map */

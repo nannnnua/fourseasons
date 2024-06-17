@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     spaceBetween: 30,
     loop: true,
     watchSlidesProgress: true,
-    slidesPerView: 3,
+    slidesPerView: 2,
     scrollbar: {
       el: ".swiper-scrollbar",
-      hide: true,
+      hide: false,
     },
   });
 });
