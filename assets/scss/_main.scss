@@ -7,20 +7,37 @@
 // main
 .sec-promo {
   display: flex;
-  .sec-promo-left {
-    width: 50%;
-    overflow: hidden;
+}
+.sec-promo-left {
+  width: 50%;
+  overflow: hidden;
+}
+.sec-promo-right {
+  width: 50%;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .img-wrap {
+    width: 412px;
+    height: 412px;
   }
-  .sec-promo-right {
-    width: 50%;
-    padding-left: 60px;
-    // @include flexAlignItems;
+  .swiper-scrollbar {
+    position: static;
+    margin-top: 72px;
   }
 }
 
 .sec-rooms {
+  padding: 120px 100px;
   h2 {
     text-align: center;
+  }
+  .cont-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px; // 필요한 경우 .big-img와 .pagination 사이의 간격을 조정
   }
   .big-img {
     position: relative;
@@ -96,9 +113,8 @@
 
 .sec-info {
   width: 100%;
-  height: 100vh;
-  background-image: url(../images/sec_info_bg1.png);
-  .item1 {
+  .sec-info-item1 {
+    background-image: url(../images/info_bg1.png);
     @include flexCenter;
     .txt-wrap {
       text-align: center;
@@ -110,9 +126,84 @@
       strong {
         font-size: 1.5rem;
       }
+      .under-line {
+        margin: 32px auto;
+      }
       p {
         font-size: 1.125rem;
       }
     }
+  }
+  .sec-info-item2 {
+    background-image: url(../images/info_bg2.png);
+    p {
+      right: 124px;
+      width: 680px;
+    }
+  }
+  .sec-info-item3 {
+    background-image: url(../images/info_bg3.png);
+    p {
+      right: 140px;
+      width: 664px;
+    }
+  }
+  .sec-info-item4 {
+    background-image: url(../images/info_bg4.png);
+    p {
+      right: 166px;
+      width: 640px;
+    }
+  }
+  .sec-info-item5 {
+    background-image: url(../images/info_bg5.png);
+    p {
+      right: 136px;
+      width: 666px;
+    }
+  }
+}
+
+.sec-facil {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  .inner {
+    padding: 0;
+    margin-bottom: 32px;
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  .item {
+    width: calc(100% / 4);
+    height: 600px;
+    background: #fff;
+    border: 1px solid #000;
+  }
+  .slide-btns {
+    position: absolute;
+    top: 132px;
+    right: 100px;
+  }
+  .slide-btns button {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .slide-btns button:hover svg {
+    fill: #222;
+  }
+  .slide-btns button:hover path {
+    stroke: #fff;
+  }
+  .slide-btns .disable {
+    opacity: 0.3;
+    cursor: auto;
+  }
+  .slide-btns button:hover.disable svg {
+    fill: transparent;
+  }
+  .slide-btns button:hover.disable path {
+    stroke: #222;
   }
 }

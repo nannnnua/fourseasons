@@ -286,6 +286,36 @@ h2 {
   margin-bottom: 32px;
 }
 
+.sec-info-item {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: no-repeat center/cover;
+}
+.sec-info-item .sec-info-tit {
+  position: absolute;
+  top: 120px;
+  left: 180px;
+}
+.sec-info-item .sec-info-tit h2 {
+  font-family: "SUIT", sans-serif;
+  font-weight: 600;
+}
+.sec-info-item .sec-info-tit + p {
+  position: absolute;
+  bottom: 100px;
+  font-size: 20px;
+  word-break: keep-all;
+}
+
+.under-line {
+  display: block;
+  width: 64px;
+  height: 2px;
+  background: #fff;
+}
+
 .hero video {
   width: 100%;
 }
@@ -293,17 +323,39 @@ h2 {
 .sec-promo {
   display: flex;
 }
-.sec-promo .sec-promo-left {
+
+.sec-promo-left {
   width: 50%;
   overflow: hidden;
 }
-.sec-promo .sec-promo-right {
+
+.sec-promo-right {
   width: 50%;
   padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sec-promo-right .img-wrap {
+  width: 412px;
+  height: 412px;
+}
+.sec-promo-right .swiper-scrollbar {
+  position: static;
+  margin-top: 72px;
 }
 
+.sec-rooms {
+  padding: 120px 100px;
+}
 .sec-rooms h2 {
   text-align: center;
+}
+.sec-rooms .cont-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
 }
 .sec-rooms .big-img {
   position: relative;
@@ -374,25 +426,99 @@ h2 {
 
 .sec-info {
   width: 100%;
-  height: 100vh;
-  background-image: url(../images/sec_info_bg1.png);
 }
-.sec-info .item1 {
+.sec-info .sec-info-item1 {
+  background-image: url(../images/info_bg1.png);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.sec-info .item1 .txt-wrap {
+.sec-info .sec-info-item1 .txt-wrap {
   text-align: center;
   width: 720px;
   color: #fff;
 }
-.sec-info .item1 .txt-wrap h2 {
+.sec-info .sec-info-item1 .txt-wrap h2 {
   margin-bottom: 4px;
 }
-.sec-info .item1 .txt-wrap strong {
+.sec-info .sec-info-item1 .txt-wrap strong {
   font-size: 1.5rem;
 }
-.sec-info .item1 .txt-wrap p {
+.sec-info .sec-info-item1 .txt-wrap .under-line {
+  margin: 32px auto;
+}
+.sec-info .sec-info-item1 .txt-wrap p {
   font-size: 1.125rem;
+}
+.sec-info .sec-info-item2 {
+  background-image: url(../images/info_bg2.png);
+}
+.sec-info .sec-info-item2 p {
+  right: 124px;
+  width: 680px;
+}
+.sec-info .sec-info-item3 {
+  background-image: url(../images/info_bg3.png);
+}
+.sec-info .sec-info-item3 p {
+  right: 140px;
+  width: 664px;
+}
+.sec-info .sec-info-item4 {
+  background-image: url(../images/info_bg4.png);
+}
+.sec-info .sec-info-item4 p {
+  right: 166px;
+  width: 640px;
+}
+.sec-info .sec-info-item5 {
+  background-image: url(../images/info_bg5.png);
+}
+.sec-info .sec-info-item5 p {
+  right: 136px;
+  width: 666px;
+}
+
+.sec-facil {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+.sec-facil .inner {
+  padding: 0;
+  margin-bottom: 32px;
+}
+.sec-facil .inner h2 {
+  margin-bottom: 0;
+}
+.sec-facil .item {
+  width: 25%;
+  height: 600px;
+  background: #fff;
+  border: 1px solid #000;
+}
+.sec-facil .slide-btns {
+  position: absolute;
+  top: 132px;
+  right: 100px;
+}
+.sec-facil .slide-btns button {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.sec-facil .slide-btns button:hover svg {
+  fill: #222;
+}
+.sec-facil .slide-btns button:hover path {
+  stroke: #fff;
+}
+.sec-facil .slide-btns .disable {
+  opacity: 0.3;
+  cursor: auto;
+}
+.sec-facil .slide-btns button:hover.disable svg {
+  fill: transparent;
+}
+.sec-facil .slide-btns button:hover.disable path {
+  stroke: #222;
 }/*# sourceMappingURL=styles.css.map */

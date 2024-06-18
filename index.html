@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Four Seasons Hotel Seoul</title>
+
   <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </head>
@@ -32,49 +38,51 @@
     <main id="main">
       <section class="sec-promo">
         <div class="sec-promo-left">
-          <img src="./assets/images/sec1_left_img1.png" alt="서울 겟어웨이">
+          <img src="./assets/images/promo_left_img1.png" alt="서울 겟어웨이">
         </div>
         <div class="sec-promo-right">
-          <h2>Promotion</h2>
-          <div class="swiper promoSlider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="img-wrap">
-                  <img src="./assets/images/sec1_right_img1.png" alt="서울 겟어웨이">
+          <div class="cont-wrap">
+            <h2>Promotion</h2>
+            <div class="swiper promoSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img-wrap">
+                    <img src="./assets/images/promo_right_img1.png" alt="서울 겟어웨이">
+                  </div>
+                  <p>서울 겟어웨이</p>
+                  <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
                 </div>
-                <p>서울 겟어웨이</p>
-                <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
-              </div>
-              <div class="swiper-slide">
-                <div class="img-wrap">
-                  <img src="./assets/images/sec1_right_img2.png" alt="스위트 딜라이트">
+                <div class="swiper-slide">
+                  <div class="img-wrap">
+                    <img src="./assets/images/promo_right_img2.png" alt="스위트 딜라이트">
+                  </div>
+                  <p>스위트 딜라이트</p>
+                  <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
                 </div>
-                <p>스위트 딜라이트</p>
-                <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
-              </div>
-              <div class="swiper-slide">
-                <div class="img-wrap">
-                  <img src="./assets/images/sec1_right_img3.png" alt="웰니스 이스케이프">
+                <div class="swiper-slide">
+                  <div class="img-wrap">
+                    <img src="./assets/images/promo_right_img3.png" alt="웰니스 이스케이프">
+                  </div>
+                  <p>웰니스 이스케이프</p>
+                  <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
                 </div>
-                <p>웰니스 이스케이프</p>
-                <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
-              </div>
-              <div class="swiper-slide">
-                <div class="img-wrap">
-                  <img src="./assets/images/sec1_right_img4.png" alt="키즈 포 올 시즌스">
+                <div class="swiper-slide">
+                  <div class="img-wrap">
+                    <img src="./assets/images/promo_right_img4.png" alt="키즈 포 올 시즌스">
+                  </div>
+                  <p>키즈 포 올 시즌스</p>
+                  <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
                 </div>
-                <p>키즈 포 올 시즌스</p>
-                <strong>2024년 5월 27일 – 2024년 12월 31일</strong>
               </div>
+              <div class="swiper-scrollbar"></div>
             </div>
-            <div class="swiper-scrollbar"></div>
           </div>
         </div>
       </section>
 
       <section class="sec-rooms">
-        <div class="inner">
-          <h2>Rooms</h2>
+        <h2>Rooms</h2>
+        <div class="cont-wrap">
           <div class="big-img">
             <div class="gradient"></div>
             <img src="./assets/images/rooms_img1.png" alt="프리미어 룸">
@@ -113,17 +121,86 @@
       </section>
 
       <section class="sec-info">
-        <div class="item1">
+        <div class="sec-info-item sec-info-item1">
           <div class="txt-wrap">
             <h2>Four Seasons’s Seoul</h2>
             <strong>서울 심장부의 우아하고 스타일리시한 매력</strong>
+            <span class="under-line"></span>
             <p>역사적인 왕궁 유적들 사이 유리와 철조로 지어진 건축물을 품은 서울은 전통적인 느낌이 물씬한 동시에 미래 지향적인 감각이 가득한 역동적인 도시입니다. 바닥에서 천장까지 통유리가 설치된 객실에서 밖을 내다보면, 서울의 역동적인 풍경이 한눈에 펼쳐집니다. 광화문에 위치한 현대적인 감각의 포시즌스 호텔 서울은 포시즌스만의 서비스를 선보이는 특별한 공간입니다.</p>
           </div>
         </div>
-        <div class="item2"></div>
-        <div class="item3"></div>
-        <div class="item4"></div>
-        <div class="item5"></div>
+        <div class="sec-info-item sec-info-item2">
+          <div class="sec-info-tit">
+            <h2>
+              조선<br>
+              왕조의 향기
+            </h2>
+            <span class="under-line"></span>
+          </div>
+          <p>한국가구박물관에서 시간을 거스르는 여행을 즐겨보세요. 총 2,000여점이 넘는 한국의 전통 목가구들과 함께 한국의 전통 마당, 집을 둘러싼 자연의 조화로운 모습을 통하여 아름다운 한국의 주생활 문화를 감상하실 수 있습니다.</p>
+        </div>
+        <div class="sec-info-item sec-info-item3">
+          <div class="sec-info-tit">
+            <h2>
+              전통의 감성과 근대의 세련미,<br>
+              현대의 힙함을 담아낸 한 잔
+            </h2>
+            <span class="under-line"></span>
+          </div>
+          <p>한국식 컨템퍼러리 바 ‘#오울(OUL)’ 은 전통 시대와 근대, 현대 등 다양한 시대 속 서울의 다이내믹한 밤 문화를 세련된 스타일로 선보입니다. 막걸리부터 소주, 와인, 맥주, 진까지 국내 주류와 식재료의 다채로운 변주를 기대해 주세요.</p>
+        </div>
+        <div class="sec-info-item sec-info-item4">
+          <div class="sec-info-tit">
+            <h2>
+              인터내셔널<br>
+              딜라이트
+            </h2>
+            <span class="under-line"></span>
+          </div>
+          <p>서울의 중심부에서 세계적인 수준의 다이닝 경험과 매력적인 사교의 장을 선사하는 레스토랑과 바입니다.</p>
+        </div>
+        <div class="sec-info-item sec-info-item5">
+          <div class="sec-info-tit">
+            <h2>쇼핑의 천국</h2>
+            <span class="under-line"></span>
+          </div>
+          <p>최고급 플래그십 스토어에서부터 활기 넘치는 거리의 노점들까지, 고급스러운 분위기의 강남 지역에 위치한 압구정 로데오 거리를 둘러보세요. 호텔에 문의하시면 원하시는 품목에 따라 최적의 쇼핑 장소를 안내해 드립니다.</p>
+        </div>
+      </section>
+
+      <section class="sec-facil">
+        <div class="inner">
+          <h2>Facilities</h2>
+        </div>
+        <div class="slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+          <div class="item">
+            <a href="#">
+              <h3>사우나</h3>
+            </a>
+          </div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+
+        <div class="slide-btns">
+          <button class="prev-btn disable">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+              <rect x="47.5" y="47.5" width="47" height="47" rx="23.5" transform="rotate(-180 47.5 47.5)" stroke="#222222"/>
+              <path d="M23.25 31.5L15.25 24M15.25 24L23.25 16.5M15.25 24L32.75 24" stroke="#222222"/>
+            </svg>        
+          </button>
+          <button class="next-btn">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#222222"/>
+              <path d="M24.75 16.5L32.75 24M32.75 24L24.75 31.5M32.75 24L15.25 24" stroke="#222222"/>
+            </svg>
+          </button>          
+        </div>
       </section>
     </main>
   </div>
