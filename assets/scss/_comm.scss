@@ -13,7 +13,7 @@ h2 {
 }
 
 // sec-info
-.sec-info-item {
+.parallax-item {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -25,7 +25,7 @@ h2 {
     top: 120px;
     left: 180px;
     h2 {
-      font-family: 'SUIT', sans-serif;
+      font-family: 'Pretendard', sans-serif;
       font-weight: 600;
     }
   }
@@ -41,4 +41,38 @@ h2 {
   width: 64px;
   height: 2px;
   background: $white;
+}
+
+// footer
+#footer {
+  background: #222;
+  color: $gray-30;
+  font-weight: 300;
+  .f-inner {
+    width: 1460px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  a {
+    color: $gray-30;
+    font-weight: 300;
+  }
+  .f-top {
+    display: flex;
+    justify-content: space-between;
+    .fnb-wrap {
+      display: flex;
+      gap: 140px;
+      a {
+        color: $gray-30;
+        display: block;
+        margin-bottom: 12px;
+      }
+      h3 {
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }

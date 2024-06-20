@@ -2,37 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 /* reset */
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-textarea,
-p,
-blockquote,
-th,
-td,
-input,
-select,
-button,
-* {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 fieldset,
@@ -71,6 +60,7 @@ textarea {
 }
 
 button {
+  padding: 0;
   font-size: 100%;
   vertical-align: middle;
   border: 0 none;
@@ -120,11 +110,10 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 /* 기본 폰트 설정 */
-/* mobile */
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "SUIT", sans-serif;
+  font-family: "Pretendard", sans-serif;
   color: #1d1d1d;
   font-weight: 400;
 }
@@ -139,15 +128,6 @@ a:active, a:hover {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1280px) {
-  a {
-    color: #333;
-    text-decoration: none;
-  }
-  a:active, a:hover {
-    text-decoration: underline;
-  }
-}
 address,
 caption,
 cite,
@@ -286,23 +266,23 @@ h2 {
   margin-bottom: 32px;
 }
 
-.sec-info-item {
+.parallax-item {
   position: relative;
   width: 100%;
   height: 100vh;
   color: #fff;
   background: no-repeat center/cover;
 }
-.sec-info-item .sec-info-tit {
+.parallax-item .sec-info-tit {
   position: absolute;
   top: 120px;
   left: 180px;
 }
-.sec-info-item .sec-info-tit h2 {
-  font-family: "SUIT", sans-serif;
+.parallax-item .sec-info-tit h2 {
+  font-family: "Pretendard", sans-serif;
   font-weight: 600;
 }
-.sec-info-item .sec-info-tit + p {
+.parallax-item .sec-info-tit + p {
   position: absolute;
   bottom: 100px;
   font-size: 20px;
@@ -314,6 +294,39 @@ h2 {
   width: 64px;
   height: 2px;
   background: #fff;
+}
+
+#footer {
+  background: #222;
+  color: #d8d8d8;
+  font-weight: 300;
+}
+#footer .f-inner {
+  width: 1460px;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+#footer a {
+  color: #d8d8d8;
+  font-weight: 300;
+}
+#footer .f-top {
+  display: flex;
+  justify-content: space-between;
+}
+#footer .f-top .fnb-wrap {
+  display: flex;
+  gap: 140px;
+}
+#footer .f-top .fnb-wrap a {
+  color: #d8d8d8;
+  display: block;
+  margin-bottom: 12px;
+}
+#footer .f-top .fnb-wrap h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .hero video {
@@ -343,6 +356,16 @@ h2 {
 .sec-promo-right .swiper-scrollbar {
   position: static;
   margin-top: 72px;
+}
+
+.swiper-slide p {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.swiper-slide strong {
+  font-size: 14px;
+  color: #777;
 }
 
 .sec-rooms {
@@ -492,19 +515,50 @@ h2 {
   margin-bottom: 0;
 }
 .sec-facil .item {
+  position: relative;
   width: 25%;
   height: 600px;
-  background: #fff;
-  border: 1px solid #000;
+}
+.sec-facil .item h3 {
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+  font-size: 24px;
+  color: #fff;
+}
+.sec-facil .item1 {
+  background-image: url(../images/facil_bg1.png);
+}
+.sec-facil .item2 {
+  background-image: url(../images/facil_bg2.png);
+}
+.sec-facil .item3 {
+  background-image: url(../images/facil_bg3.png);
+}
+.sec-facil .item4 {
+  background-image: url(../images/facil_bg4.png);
+}
+.sec-facil .item5 {
+  background-image: url(../images/facil_bg5.png);
+}
+.sec-facil .item6 {
+  background-image: url(../images/facil_bg6.png);
+}
+.sec-facil .item7 {
+  background-image: url(../images/facil_bg7.png);
+}
+.sec-facil .item8 {
+  background-image: url(../images/facil_bg8.png);
 }
 .sec-facil .slide-btns {
   position: absolute;
   top: 132px;
   right: 100px;
+  display: flex;
+  gap: 16px;
 }
 .sec-facil .slide-btns button {
   cursor: pointer;
-  margin-right: 10px;
 }
 .sec-facil .slide-btns button:hover svg {
   fill: #222;
@@ -521,4 +575,43 @@ h2 {
 }
 .sec-facil .slide-btns button:hover.disable path {
   stroke: #222;
+}
+
+.sec-insta .inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  padding: 0;
+  padding-top: 120px;
+  padding-bottom: 180px;
+}
+.sec-insta .item {
+  width: 429px;
+  height: 429px;
+  border-radius: 10px;
+}
+.sec-insta .item.blank {
+  border: none;
+}
+.sec-insta .item1 {
+  background-image: url(../images/insta_bg1.png);
+}
+.sec-insta .item3 {
+  background-image: url(../images/insta_bg2.png);
+}
+.sec-insta .item4 {
+  background-image: url(../images/insta_bg3.png);
+}
+.sec-insta .item5 h2 {
+  margin-top: 44px;
+  margin-bottom: 12px;
+}
+.sec-insta .item5 p {
+  width: 368px;
+}
+.sec-insta .item6 {
+  background-image: url(../images/insta_bg4.png);
+}
+.sec-insta .item8 {
+  background-image: url(../images/insta_bg5.png);
 }/*# sourceMappingURL=styles.css.map */

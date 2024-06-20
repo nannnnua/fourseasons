@@ -27,6 +27,17 @@
     margin-top: 72px;
   }
 }
+.swiper-slide {
+  p {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  strong {
+    font-size: 14px;
+    color: #777;
+  }
+}
 
 .sec-rooms {
   padding: 120px 100px;
@@ -176,19 +187,35 @@
     }
   }
   .item {
+    position: relative;
     width: calc(100% / 4);
     height: 600px;
-    background: #fff;
-    border: 1px solid #000;
+    h3 {
+      position: absolute;
+      bottom: 40px;
+      left: 48px;
+      font-size: 24px;
+      color: $white;
+    }
   }
+  .item1 {background-image: url(../images/facil_bg1.png);}
+  .item2 {background-image: url(../images/facil_bg2.png);}
+  .item3 {background-image: url(../images/facil_bg3.png);}
+  .item4 {background-image: url(../images/facil_bg4.png);}
+  .item5 {background-image: url(../images/facil_bg5.png);}
+  .item6 {background-image: url(../images/facil_bg6.png);}
+  .item7 {background-image: url(../images/facil_bg7.png);}
+  .item8 {background-image: url(../images/facil_bg8.png);}
+
   .slide-btns {
     position: absolute;
     top: 132px;
     right: 100px;
+    display: flex;
+    gap: 16px;
   }
   .slide-btns button {
     cursor: pointer;
-    margin-right: 10px;
   }
   .slide-btns button:hover svg {
     fill: #222;
@@ -206,4 +233,41 @@
   .slide-btns button:hover.disable path {
     stroke: #222;
   }
+}
+
+// sec-insta
+.sec-insta {
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    padding: 0;
+    padding-top: 120px;
+    padding-bottom: 180px;
+  }
+  .item {
+    width: 429px;
+    height: 429px;
+    // border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+  .item.blank {
+    border: none;
+  }
+  .item1 {background-image: url(../images/insta_bg1.png);}
+  .item2 {}
+  .item3 {background-image: url(../images/insta_bg2.png);}
+  .item4 {background-image: url(../images/insta_bg3.png);}
+  .item5 {
+    h2 {
+      margin-top: 44px;
+      margin-bottom: 12px;
+    }
+    p {
+      width: 368px;
+    }
+  }
+  .item6 {background-image: url(../images/insta_bg4.png);}
+  .item7 {}
+  .item8 {background-image: url(../images/insta_bg5.png);}
 }

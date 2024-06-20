@@ -1,35 +1,24 @@
 /* reset */
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-textarea,
-p,
-blockquote,
-th,
-td,
-input,
-select,
-button,
-* {
-    margin: 0;
-    padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
     box-sizing: border-box;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 fieldset,
@@ -74,6 +63,7 @@ textarea {
 }
 
 button {
+    padding: 0;
     font-size: 100%;
     vertical-align: middle;
     border: 0 none;
@@ -127,11 +117,10 @@ input {
 }
 
 /* 기본 폰트 설정 */
-/* mobile */
 body {
     font-size: 16px;
     line-height: 1.5;
-    font-family: 'SUIT', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     color: $gray-90;
     font-weight: 400;
 }
@@ -157,17 +146,6 @@ a {
     &:active,
     &:hover {
         text-decoration: none;
-    }
-}
-@media screen and (min-width: 1280px) {
-    a {
-        color: #333;
-        text-decoration: none;
-
-        &:active,
-        &:hover {
-            text-decoration: underline;
-        }
     }
 }
 
