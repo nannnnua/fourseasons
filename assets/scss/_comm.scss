@@ -12,6 +12,81 @@ h2 {
   margin-bottom: 32px;
 }
 
+// header
+#header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  .h-inner {
+    width: 1440px;
+    margin: auto;
+    text-align: center;
+  }
+  .h-top {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid rgba($color: $white, $alpha: 0.4);
+    }
+  }
+  .logo {
+    display: block;
+    margin: 14px auto;
+  }
+  .util {
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    .lang {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 36px;
+      font-size: 14px;
+      font-weight: 300;
+      color: $white;
+      cursor: pointer;
+      &:hover .drop-down {
+        display: block;
+      }
+      .drop-down {
+        position: absolute;
+        top: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        background: rgba($color: $white, $alpha: 0.4);
+        backdrop-filter: blur(10px);
+        a {
+          display: block;
+          padding: 4px 16px;
+          color: $white;
+        }
+      }
+    }
+    .all-menu {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  #gnb {
+    margin-top: 14px;
+    ul {
+      display: flex;
+      gap: 64px;
+      justify-content: center;
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
 // sec-info
 .parallax-item {
   position: relative;
@@ -45,6 +120,7 @@ h2 {
 
 // footer
 #footer {
+  position: relative;
   background: #222;
   color: $gray-30;
   font-weight: 300;
@@ -59,8 +135,12 @@ h2 {
     font-weight: 300;
   }
   .f-top {
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetween;
+    align-items: start;
+    margin-bottom: 80px;
+    .f-logo {
+      height: 80px;
+    }
     .fnb-wrap {
       display: flex;
       gap: 140px;
@@ -74,5 +154,43 @@ h2 {
         margin-bottom: 20px;
       }
     }
+  }
+  .f-bottom {
+    position: relative;
+    @include flexSpaceBetween;
+    font-size: 14px;
+    padding-top: 24px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #888;
+    }
+    ul {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 8px;
+      li:nth-child(2) a {
+        font-weight: 500;
+      }
+    }
+    p {
+      color: #888;
+    }
+    .icon-wrap {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  .btn-totop {
+    position: absolute;
+    top: 0;
+    right: 94px;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-50%);
   }
 }

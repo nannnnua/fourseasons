@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Youtube</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .sec-hero {
+      position: relative;
+      height: 1080px;
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .youtube-area {
+      position: absolute;
+      width: 1920px;
+      /* 16비율 */
+    left: 50%;
+    margin-left: calc(1920px / -2);
+
+    /* 9비율 */
+    top: 50%;
+    margin-top: calc(1920px * 9 / 16 / -2);
+    }
+
+    .youtube-area::before {
+      content: "";
+      display: block;
+      /* 16:9 영상 비율로 요소 크기 만들기! */
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
+    }
+
+    /* .youtube-area iframe {
+      width: 100vw;
+      height: 100vh;
+    } */
+
+    .youtube-dimmed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .player {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- https://codepen.io/odada/pen/RwEVgyx -->
+  <section class="sec-hero">
+    <div class="youtube-area">
+      <div id="hero" class="player"></div>
+    </div>
+    <div class="youtube-dimmed"></div>
+  </section>
+
+  <script>
+    // YouTube IFrame API를 비동기로 로드합니다.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // onYouTubePlayerAPIReady 함수 이름은,
+    // YouTube IFrame Player API에서 사용하는 이름이기 때문에,
+    // 다르게 지정하면 동작하지 않습니다!
+    // 그리고 함수는 전역(Global) 등록해야 합니다!
+    function onYouTubePlayerAPIReady() {
+      new YT.Player('hero', {
+        videoId: 'T3iEdGJD2Lg', // 최초 재생할 유튜브 영상 ID
+        playerVars: {
+          autoplay: 1, // 자동 재생 유무
+          loop: 1, // 반복 재생 유무
+          playlist: 'T3iEdGJD2Lg', // 반복 재생할 유튜브 영상 ID 목록
+          mute: 1, // 음소거 설정
+          controls: 0, // 플레이어 컨트롤 숨기기
+          modestbranding: 1, // YouTube 로고 숨기기
+          rel: 0, // 관련 동영상 표시 안 함
+          disablekb: 1, // 키보드 컨트롤 비활성화
+          fs: 0, // 전체 화면 버튼 숨기기
+          iv_load_policy: 3, // 주석 숨기기
+          cc_load_policy: 0 // 자막 숨기기
+        },
+        events: {
+          // 영상이 준비되었을 때,
+          onReady: function (event) {
+            event.target.playVideo(); // 자동 재생!
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
