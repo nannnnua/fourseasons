@@ -134,6 +134,15 @@
     p {
       width: 300px;
       margin-bottom: 32px;
+      font-weight: 200;
+    }
+    .btn-more {
+      @include flexAlignItems;
+      gap: 8px;
+      color: $white;
+      img {
+        margin-top: -1px;
+      }
     }
   }
   .pagination {
@@ -195,7 +204,14 @@
       }
       p {
         font-size: 1.125rem;
+        font-weight: 200;
       }
+    }
+  }
+  .parallax-item {
+    p {
+      font-size: 1.25rem;
+      font-weight: 300;
     }
   }
   .sec-info-item2 {

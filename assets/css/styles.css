@@ -589,6 +589,16 @@ h2 {
 .sec-rooms .txt-wrap p {
   width: 300px;
   margin-bottom: 32px;
+  font-weight: 200;
+}
+.sec-rooms .txt-wrap .btn-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+.sec-rooms .txt-wrap .btn-more img {
+  margin-top: -1px;
 }
 .sec-rooms .pagination {
   height: 766px;
@@ -650,6 +660,11 @@ h2 {
 }
 .sec-info .sec-info-item1 .txt-wrap p {
   font-size: 1.125rem;
+  font-weight: 200;
+}
+.sec-info .parallax-item p {
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 .sec-info .sec-info-item2 {
   background-image: url(../images/info_bg2.png);
